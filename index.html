@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts</title>
+    
+    <link rel="apple-touch-icon" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+</head>
+<body>
+
+    <div id="container" class="container">
+        <!-- BLOB -->
+        <div class="blob">
+        </div>
+
+        <!-- TEXT -->
+        <div class="text-container">
+            <h1>Do you know...</h1>
+            <p id="text_driver">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, in?</p>
+        </div>
+
+        <!-- SLIDER -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="border"></div>
+                <div class="menu">
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span id="welcome_driver"></span>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+                <img src="https://placekitten.com/400/400"></img>
+            </div>
+        </div>
+
+        <!-- CHANGE ITEMS -->
+        <div class="btn-container">
+            <button id="btn_driver">more catfacts</button>
+        </div>
+    </div>
+
+    <!-- tutorial -->
+    <div class="tutorial">
+        <img src="confused.png" alt="?">
+    </div>
+
+    <!-- splash -->
+    <div class="loading">
+        <dotlottie-player src="https://lottie.host/83f316bc-0b4c-4917-894c-0f874900ff3a/4XdjB9O3M8.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+    </div>
+
+    <!-- <script defer src="data.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <script defer src="app.js"></script>
+
+</body>
+</html>

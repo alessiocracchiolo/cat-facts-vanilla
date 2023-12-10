@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=Rubik+Bubbles&display=swap');
+
+/**
+  palette
+
+  primary: #F7C4A5
+  secondary: #73956F
+  tertiary: #183A37
+
+
+**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: #F7C4A5;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #F7C4A5;
+}
+
+/* BLOB CHE SI SPOSTA NELLA HERO */
+.blob {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(115, 149, 111, .2);
+    /* animation: move 30s infinite alternate; */
+}
+
+@keyframes move {
+    
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    
+}
+
+/* TESTO */
+.text-container{
+    width: 100%;
+    /* height: 30%; */
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text-container h1{
+    font-size: 2rem;
+    color: #183A37;
+}
+
+.text-container p{
+    font-size: 1.5rem;
+    color: #183A37;
+}
+
+/* SLIDER */
+.slider-container{
+    width: 100%;
+    /* height: 70%; */
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.slider {
+    width: 100%;
+    height: 600px;
+    max-width: 700px;
+    max-height: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transition: all 0.5s ease;
+}
+
+/* IMG */
+.slider img{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* CIRCLE BORDER */
+.border {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    max-height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #73956F;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+/* POINTER */
+.border::before{
+    content: "";
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #183A37;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 690px) {
+
+    .slider{
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .slider img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .border {
+        max-width: 330px;
+        max-height: 330px;
+    }
+
+    .border::before {
+        width: 15px;
+        height: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 390px) {
+
+    .slider{
+        max-width: 330px;
+        max-height: 330px;
+    }
+
+    .slider img {
+        max-width: 220px;
+        max-height: 220px;
+    }
+
+    .border {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .border::before {
+        width: 10px;
+        height: 10px;
+    }
+    
+}
+
+.menu div {
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 1rem;
+    color: black;
+
+    cursor: pointer;
+}
+
+.menu div span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100px;
+}
+
+.menu div:nth-child(2) {
+    left: auto;
+    top: 13%;
+    right: 13%;
+    transform: translate(13%) rotate(45deg);
+}
+
+.menu div:nth-child(3) {
+    left: auto;
+    top: 50%;
+    right: 0%;
+    transform: translateY(50%) rotate(90deg);
+    
+}
+
+.menu div:nth-child(4) {
+    left: auto;
+    top: 87%;
+    right: 16%;
+    transform: translate(13%) rotate(135deg);
+}
+
+.menu div:nth-child(5) {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.menu div:nth-child(6) {
+    top: 87%;
+    left: 16%;
+    transform: translate(-13%) rotate(225deg);
+}
+
+.menu div:nth-child(7) {
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) rotate(270deg);
+}
+
+.menu div:nth-child(8) {
+    top: 13%;
+    left: 13%;
+    transform: translate(-13%) rotate(315deg);
+}
+
+@media screen and (max-width: 690px) {
+
+    .menu div {
+        font-size: 0.8rem;
+    }
+
+    .menu div:nth-child(2) {
+        top: 16%;
+        right: 2%;
+        transform: rotate(48deg);
+    }
+
+    .menu div:nth-child(3) {
+        top: 50%;
+        right: 0%;
+        transform: translateX(40%) rotate(90deg);
+    }
+
+    .menu div:nth-child(4) {
+        top: 84%;
+        right: 1%;
+        transform: translateY(84%) rotate(135deg);
+    }
+
+    .menu div:nth-child(5) {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+    }
+
+    .menu div:nth-child(6) {
+        top: 89%;
+        left: -3%;
+        transform: translateY(-89%) rotate(225deg);
+    }
+
+    .menu div:nth-child(7) {
+        top: 50%;
+        left: 0%;
+        transform: translate(-50%) rotate(270deg);
+    }
+
+    .menu div:nth-child(8) {
+        top: 16%;
+        left: 2%;
+        transform: translateY(-16%) rotate(315deg);
+    }
+    
+}
+
+/* TESTO ATTIVO NELLO SLIDER */
+.active {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #183A37;
+}
+
+/* BOTTONE */
+.btn-container {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.btn-container button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #73956F;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #183A37;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #183A37;
+}
+
+.btn-container button:hover {
+    transform: translateY(5px);
+    box-shadow: 0px 3px 0px 0px #183A37;
+}
+
+.btn-container button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #183A37;
+}
+
+/* TUTORIAL */
+.tutorial {
+    cursor: help;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+.tutorial img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* LOADING SCREEN */
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #73956F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    transition: all .5s ease;
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    z-index: -100;
+    pointer-events: none;
+}
+
+
+/* DRIVER JS CUSTOM */
+.driver-popover {
+    border: 3px solid #183A37;
+}
+
+.driver-popover-arrow {
+    margin: 2px;
+    border-width: 10px;
+}
+
+.driver-popover-arrow-side-left.driver-popover-arrow {
+    border-left-color: #183A37;
+}
+
+.driver-popover-arrow-side-right.driver-popover-arrow {
+    border-right-color: #183A37;
+}
+
+.driver-popover-arrow-side-top.driver-popover-arrow {
+    border-top-color: #183A37;
+}
+
+.driver-popover-arrow-side-bottom.driver-popover-arrow {
+    border-bottom-color: #183A37;
+}
+
+.driver-popover-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.driver-popover-description {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.driver-popover-close-btn {
+    color: #183A37;
+}
+
+.driver-popover-footer {
+    border-top: 1px solid #73956F;
+    padding-top: 10px;
+}
+
+.driver-popover-progress-text {
+    color: #183A37;
+}
