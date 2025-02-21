@@ -1,7 +1,5 @@
 # Cat Fact
 
-Exercice for Makr Shakr
-
 ## Author
 
 - Nome: Alessio Cracchiolo
